@@ -23,8 +23,8 @@ class UserSaveRequest extends FormRequest
     {
         $id = $this->route()->parameter('user') ?? '';
         return [
-            'nama' => 'required',
-            'email' => 'required|unique:user,email' . ($id != '' ? (',' . $id) : ''),
+            'name' => 'required',
+            'email' => 'required|unique:users,email' . ($id != '' ? (',' . $id) : ''),
             'password' => 'confirmed'
         ];
     }

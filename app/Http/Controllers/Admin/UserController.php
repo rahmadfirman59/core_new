@@ -34,12 +34,13 @@ class UserController extends Controller
 
     public function store(UserSaveRequest $request)
     {
-        return $this->userService->create($request->all());
+        return $this->userService->store($request->all());
     }
 
     public function edit($id)
     {
         $user = $this->userService->find($id);
+
         return view('admin.user._info', compact('user'));
     }
 

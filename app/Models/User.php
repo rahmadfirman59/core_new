@@ -11,7 +11,9 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
-    const AKSES = ['Dinas Pendidikan', 'Kecamatan', 'Desa', 'Lembaga Pendidikan'];
+
+    protected  $table = "users";
+    const AKSES = ['Superadmin', 'Ooerator'];
 
     /**
      * The attributes that are mass assignable.
@@ -22,6 +24,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'akses'
     ];
 
     /**

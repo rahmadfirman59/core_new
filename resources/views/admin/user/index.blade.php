@@ -65,7 +65,7 @@
 
         let info = (id = '') => {
             $card_data.hide();
-            $.get(base_url + '/' + (id === '' ? 'create' : (id + '/edit')), (result) => card_info.html(result)).fail((xhr) => $card_info.html(xhr.responseText));
+            $.get(base_url + '/' + (id === '' ? 'create' : (id + '/edit')), (result) => $card_info.html(result)).fail((xhr) => $card_info.html(xhr.responseText));
         }
 
         let confirm_delete = (id) => {

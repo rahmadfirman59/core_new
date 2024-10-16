@@ -10,8 +10,8 @@ class UserService extends Service
     {
         $user = User::whereNotNull('id');
         $name = $params['nama'] ?? '';
-        if ($name !== '') $user = $user->where('nama', 'like', "%$name%");
-        $user = $this->searchFilter($params, $user, []);
+        if ($name !== '') $user = $user->where('name', 'like', "%$name%");
+        $user = $this->searchFilter($params, $user, ['akses']);
         return $this->searchResponse($params, $user);
     }
 

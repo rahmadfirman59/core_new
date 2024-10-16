@@ -8,9 +8,7 @@ class MenuService
         ['route' => 'admin', 'caption' => 'Dashboard'],
         ['route' => 'admin.user.index', 'caption' => 'Data Master', 'side_menus' => [
             ['route' => 'admin.user.index', 'caption' => 'User'],
-            ['route' => 'admin.status_siswa.index', 'caption' => 'Status Siswa'],
-            ['route' => 'admin.tingkat.index', 'caption' => 'Tingkat Lembaga'],
-            ['route' => 'admin.jenis_info.index', 'caption' => 'Jenis Info Siswa'],
+            ['route' => 'admin.slider.index', 'caption' => 'Slider'],
         ]],
     ];
 
