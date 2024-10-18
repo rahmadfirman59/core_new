@@ -12,10 +12,10 @@ class MenuService
         ]],
         ['route' => 'admin.profil.sambutan', 'caption' => 'Profil', 'side_menus' => [
             ['route' => 'admin.profil.sambutan', 'caption' => 'Sambutan'],
-            ['route' => 'admin.profil.visi_misi', 'caption' => 'Visi Misi'],
-            ['route' => 'admin.profil.sejaraha', 'caption' => 'Visi misi'],
-            ['route' => 'admin.profil.pengurus', 'caption' => 'Sejarah'],
-            ['route' => 'admin.profil.program_kerja', 'caption' => 'Program Kerja'],
+            ['route' => 'admin.profil.visi.misi', 'caption' => 'Visi Misi'],
+            ['route' => 'admin.profil.sejarah', 'caption' => 'Sejarah'],
+            ['route' => 'admin.profil.pengurus', 'caption' => 'Pengurus'],
+            ['route' => 'admin.profil.program.kerja', 'caption' => 'Program Kerja'],
         ]],
     ];
 
