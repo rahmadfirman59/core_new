@@ -10,6 +10,13 @@ class MenuService
             ['route' => 'admin.user.index', 'caption' => 'User'],
             ['route' => 'admin.slider.index', 'caption' => 'Slider'],
         ]],
+        ['route' => 'admin.profil.sambutan', 'caption' => 'Profil', 'side_menus' => [
+            ['route' => 'admin.profil.sambutan', 'caption' => 'Sambutan'],
+            ['route' => 'admin.profil.visi_misi', 'caption' => 'Visi Misi'],
+            ['route' => 'admin.profil.sejaraha', 'caption' => 'Visi misi'],
+            ['route' => 'admin.profil.pengurus', 'caption' => 'Sejarah'],
+            ['route' => 'admin.profil.program_kerja', 'caption' => 'Program Kerja'],
+        ]],
     ];
 
     public function list_menu($role): array

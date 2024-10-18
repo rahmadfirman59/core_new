@@ -14,7 +14,7 @@ class HomeController extends Controller
             auth()->logout();
         }
 
-        return "bukan admin";
+        return redirect()->route('login');
     }
     //
 }

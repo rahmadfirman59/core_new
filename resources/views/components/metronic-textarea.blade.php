@@ -14,6 +14,7 @@
                 {{ $attributes }}
             />
         </div>
+
     </div>
 @endif
 @if($viewtype === 2)

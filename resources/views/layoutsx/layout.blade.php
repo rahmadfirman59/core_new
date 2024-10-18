@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <base href="{{ url('/') }}" />
-    <title>@yield('title') {{ env('APP_NAME') }}</title>
+    <title>@yield('title')  {{ config('app.name') }}</title>
     <meta charset="utf-8" />
     <meta name="token" content="{{ csrf_token() }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,6 +13,7 @@
     <link href="{{ asset('assets/plugins/custom/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+
     <style>
         div.datepicker-dropdown {
             padding: 12px;
@@ -128,7 +129,9 @@
 <script src="{{ asset('assets/plugins/custom/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('assets/js/auto-numeric.js') }}"></script>
 <script src="{{ asset('assets/js/io.js') }}"></script>
+
 <script>
+
     @if(session()->has('success'))
         swal.fire('{{ session('success') }}');
     @endif

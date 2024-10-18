@@ -6,7 +6,7 @@ use Illuminate\View\Component;
 
 class Textarea extends Component
 {
-    public $class, $prefix, $name, $caption, $value, $rows, $required;
+    public $class, $prefix, $name, $caption, $value, $rows, $required,$alert;
     public function __construct(
         $class = null,
         $prefix = null,
@@ -14,7 +14,8 @@ class Textarea extends Component
         $caption = null,
         $value = '',
         $rows = 3,
-        $required = ''
+        $required = '',
+        $alert = '1',
     )
     {
         $this->class = $class;
@@ -24,6 +25,7 @@ class Textarea extends Component
         $this->value = $value;
         $this->rows = $rows;
         $this->required = $required;
+        $this->alert = $alert;
     }
 
     public function render()

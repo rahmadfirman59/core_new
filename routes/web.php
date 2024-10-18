@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/');
 Route::middleware([])->group(__DIR__ . '/auth.php');
 
