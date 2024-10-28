@@ -13,6 +13,7 @@
     <link href="{{ asset('assets/plugins/custom/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
     <style>
         div.datepicker-dropdown {
             padding: 12px;
@@ -128,6 +129,7 @@
 <script src="{{ asset('assets/plugins/custom/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('assets/js/auto-numeric.js') }}"></script>
 <script src="{{ asset('assets/js/io.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
 <script>
     @if(session()->has('success'))
     swal.fire('{{ session('success') }}');
@@ -140,5 +142,12 @@
     @endif
 </script>
 @stack('scripts')
+<script>
+    $('.summernote').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 100
+    });
+</script>
 </body>
 </html>

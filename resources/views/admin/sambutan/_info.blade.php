@@ -14,8 +14,10 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-12">
-                        <x-metronic-textarea name="konten" caption="Sambutan" :value="$sambutan->konten ?? ''"  class="summernote"/>
+                        <x-metronic-textarea name="konten"  caption="Sambutan" :value="$sambutan->konten ?? ''" />
+
                     </div>
+
                 </div>
             </div>
             <div class="card-footer d-flex justify-content-end py-6">
@@ -35,10 +37,6 @@
             tabsize: 2,
             height: 100
         });
-
-
-
-
 
 
         let init_form = (id = '') => {
@@ -71,9 +69,12 @@
             });
         }
 
+        $form_search.submit((e) => {
+            e.preventDefault();
+            search_data();
+        });
 
-
-        init_form_element();
+        // init_form_element();
         init_form({{ $sambutan->id ?? '' }});
 
     </script>

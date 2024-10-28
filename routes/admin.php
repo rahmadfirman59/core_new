@@ -26,6 +26,13 @@ Route::name('.')->group(function () {
     Route::get('/profil/program-kerja', [App\Http\Controllers\Admin\ProfilController::class, 'program_kerja'])->name('profil.program.kerja');
     Route::put('/profil/program-kerja/{id}', [App\Http\Controllers\Admin\ProfilController::class, 'save_program_kerja'])->name('profil.pengurus.save');
 
+    Route::resource('/produk', App\Http\Controllers\Admin\ProdukController::class)->except(['show']);
+    Route::post('/produk/search', [App\Http\Controllers\Admin\ProdukController::class, 'search'])->name('produk.search');
 
+    Route::resource('/kegiatan', App\Http\Controllers\Admin\KegiatanController::class)->except(['show']);
+    Route::post('/kegiatan/search', [App\Http\Controllers\Admin\KegiatanController::class, 'search'])->name('kegiatan.search');
+
+    Route::resource('/kategori', App\Http\Controllers\Admin\KategoriController::class)->except(['show']);
+    Route::post('/kategori/search', [App\Http\Controllers\Admin\KategoriController::class, 'search'])->name('kategori.search');
 
 });

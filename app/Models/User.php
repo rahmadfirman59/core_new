@@ -13,7 +13,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     protected  $table = "users";
-    const AKSES = ['Superadmin', 'Ooerator'];
+    const AKSES = ['Superadmin', 'UMKM'];
 
     /**
      * The attributes that are mass assignable.

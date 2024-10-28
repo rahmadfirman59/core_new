@@ -43,5 +43,4 @@ class ProfilService extends Service
         return $profil;
     }
 
-
 }
