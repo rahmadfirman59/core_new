@@ -35,4 +35,7 @@ Route::name('.')->group(function () {
     Route::resource('/kategori', App\Http\Controllers\Admin\KategoriController::class)->except(['show']);
     Route::post('/kategori/search', [App\Http\Controllers\Admin\KategoriController::class, 'search'])->name('kategori.search');
 
+    Route::resource('/sambutan', App\Http\Controllers\Admin\SambutanController::class)->except(['show']);
+    Route::post('/sambutan/search', [App\Http\Controllers\Admin\SambutanController::class, 'search'])->name('sambutan.search');
+
 });

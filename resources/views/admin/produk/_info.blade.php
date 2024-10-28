@@ -14,7 +14,6 @@
                     <x-metronic-input name="bahan" caption="Bahan" :value="$produk->bahan ?? ''" />
                     <x-metronic-input name="harga" caption="Harga" :value="$produk->harga ?? ''" />
                     <x-metronic-textarea name="deskripsi" caption="Deskripsi" :value="$produk->deskripsi ?? ''" class="summernote" />
-
                 </div>
                 <div class="col-lg-2 text-center">
                     <div class="d-none">
