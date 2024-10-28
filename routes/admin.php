@@ -38,4 +38,6 @@ Route::name('.')->group(function () {
     Route::resource('/sambutan', App\Http\Controllers\Admin\SambutanController::class)->except(['show']);
     Route::post('/sambutan/search', [App\Http\Controllers\Admin\SambutanController::class, 'search'])->name('sambutan.search');
 
+    Route::resource('/visimisi', App\Http\Controllers\Admin\VisiMisiController::class)->except(['show']);
+    Route::post('/visimisi/search', [App\Http\Controllers\Admin\VisiMisiController::class, 'search'])->name('visimisi.search');
 });

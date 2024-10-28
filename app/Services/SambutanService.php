@@ -10,8 +10,8 @@ class SambutanService extends Service
     {
         $sambutan = Sambutan::whereNotNull('id');
 
-
         $sambutan = $this->searchFilter($params, $sambutan, []);
+
         return $this->searchResponse($params, $sambutan);
     }
 
@@ -23,7 +23,9 @@ class SambutanService extends Service
     public function update($params, $id)
     {
         $asmbutan = Sambutan::find($id);
+
         if (!empty($asmbutan)) $asmbutan->update($params);
+
         return $asmbutan;
     }
 }

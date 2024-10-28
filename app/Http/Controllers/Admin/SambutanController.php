@@ -38,6 +38,4 @@ class SambutanController extends Controller
     {
         return $this->sambutanService->update($request->all(),1);
     }
-
-
 }
