@@ -14,8 +14,8 @@ class MenuService
         ['route' => 'admin.sambutan.index', 'caption' => 'Profil', 'side_menus' => [
             ['route' => 'admin.sambutan.index', 'caption' => 'Sambutan'],
             ['route' => 'admin.visimisi.index', 'caption' => 'Visi Misi'],
-            ['route' => 'admin.profil.sejarah', 'caption' => 'Sejarah'],
-            ['route' => 'admin.profil.pengurus', 'caption' => 'Pengurus'],
+            ['route' => 'admin.sejarah.index', 'caption' => 'Sejarah'],
+            ['route' => 'admin.pengurus.index', 'caption' => 'Pengurus'],
             ['route' => 'admin.profil.program.kerja', 'caption' => 'Program Kerja'],
         ]],
         ['route' => 'admin.produk.index', 'caption' => 'Produk', 'side_menus' => [

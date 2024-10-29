@@ -40,4 +40,10 @@ Route::name('.')->group(function () {
 
     Route::resource('/visimisi', App\Http\Controllers\Admin\VisiMisiController::class)->except(['show']);
     Route::post('/visimisi/search', [App\Http\Controllers\Admin\VisiMisiController::class, 'search'])->name('visimisi.search');
+
+    Route::resource('/sejarah', App\Http\Controllers\Admin\SejarahController::class)->except(['show']);
+    Route::post('/sejarah/search', [App\Http\Controllers\Admin\SejarahController::class, 'search'])->name('sejarah.search');
+
+    Route::resource('/pengurus', App\Http\Controllers\Admin\PengurusController::class)->except(['show']);
+    Route::post('/pengurus/search', [App\Http\Controllers\Admin\PengurusController::class, 'search'])->name('pengurus.search');
 });
