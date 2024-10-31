@@ -10,6 +10,7 @@ class MenuService
             ['route' => 'admin.user.index', 'caption' => 'User'],
             ['route' => 'admin.slider.index', 'caption' => 'Slider'],
             ['route' => 'admin.kategori.index', 'caption' => 'Kategori'],
+            ['route' => 'admin.umkm.index', 'caption' => 'UMKM'],
         ]],
         ['route' => 'admin.sambutan.index', 'caption' => 'Profil', 'side_menus' => [
             ['route' => 'admin.sambutan.index', 'caption' => 'Sambutan'],

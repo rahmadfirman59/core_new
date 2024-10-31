@@ -9,9 +9,12 @@ class SliderService extends Service
     public function search($params = [])
     {
         $slider = Slider::whereNotNull('id');
+
         $judul = $params['judul'] ?? '';
         if ($judul !== '') $slider = $slider->where('judul', 'like', "%$judul%");
+
         $slider = $this->searchFilter($params, $slider, []);
+
         return $this->searchResponse($params, $slider);
     }
 

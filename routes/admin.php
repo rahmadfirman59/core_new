@@ -49,4 +49,7 @@ Route::name('.')->group(function () {
 
     Route::resource('/program-kerja', App\Http\Controllers\Admin\ProgramKerjaController::class)->except(['show']);
     Route::post('/program-kerja/search', [App\Http\Controllers\Admin\ProgramKerjaController::class, 'search'])->name('program.kerja.search');
+
+    Route::resource('/umkm', App\Http\Controllers\Admin\UmkmController::class)->except(['show']);
+    Route::post('/umkm/search', [App\Http\Controllers\Admin\UmkmController::class, 'search'])->name('umkm.kerja.search');
 });
