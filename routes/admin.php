@@ -46,4 +46,7 @@ Route::name('.')->group(function () {
 
     Route::resource('/pengurus', App\Http\Controllers\Admin\PengurusController::class)->except(['show']);
     Route::post('/pengurus/search', [App\Http\Controllers\Admin\PengurusController::class, 'search'])->name('pengurus.search');
+
+    Route::resource('/program-kerja', App\Http\Controllers\Admin\ProgramKerjaController::class)->except(['show']);
+    Route::post('/program-kerja/search', [App\Http\Controllers\Admin\ProgramKerjaController::class, 'search'])->name('program.kerja.search');
 });

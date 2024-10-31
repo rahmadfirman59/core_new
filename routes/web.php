@@ -12,6 +12,5 @@ Route::middleware(['auth', 'io'])->group(function () {
 
     Route::prefix('admin')->name('admin')->group(__DIR__ . '/admin.php');
 
-    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-
+//    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 });

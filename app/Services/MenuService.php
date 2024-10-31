@@ -16,7 +16,7 @@ class MenuService
             ['route' => 'admin.visimisi.index', 'caption' => 'Visi Misi'],
             ['route' => 'admin.sejarah.index', 'caption' => 'Sejarah'],
             ['route' => 'admin.pengurus.index', 'caption' => 'Pengurus'],
-            ['route' => 'admin.profil.program.kerja', 'caption' => 'Program Kerja'],
+            ['route' => 'admin.program-kerja.index', 'caption' => 'Program Kerja'],
         ]],
         ['route' => 'admin.produk.index', 'caption' => 'Produk', 'side_menus' => [
             ['route' => 'admin.produk.index', 'caption' => 'Produk'],

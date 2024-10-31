@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PengurusSaveRequest;
+use App\Services\DocumentService;
 use App\Services\PengurusService;
 use Illuminate\Http\Request;
 
@@ -32,8 +34,13 @@ class PengurusController extends Controller
         return view('admin.pengurus._info');
     }
 
-    public function store(Request $request)
+    public function store(PengurusSaveRequest $request)
     {
+
+        $filename = DocumentService::save_file($request, 'file_gambar', 'pengurus');
+
+        if ($filename !== '') $request->merge(['foto' => $filename]);
+
         $this->pengurusService->store($request->all());
     }
 
@@ -46,6 +53,15 @@ class PengurusController extends Controller
 
     public function update(Request $request,$id)
     {
-        return $this->pengurusService->update($request->all(),1);
+        $filename = DocumentService::save_file($request, 'file_gambar', 'pengurus');
+
+        if ($filename !== '') $request->merge(['foto' => $filename]);
+
+        return $this->pengurusService->update($request->all(),$id);
+    }
+
+    public function destroy($id)
+    {
+        return $this->pengurusService->delete($id);
     }
 }
