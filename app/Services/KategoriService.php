@@ -45,4 +45,13 @@ class KategoriService extends Service
         }
         return $kategori;
     }
+
+    public function dropdown()
+    {
+        $result = [];
+        foreach ($this->search() as $value) {
+            $result[$value->id] =$value->nama_kategori;
+        }
+        return $result;
+    }
 }

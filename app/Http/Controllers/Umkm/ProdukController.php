@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Umkm;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProdukSaveRequest;
 use App\Services\DocumentService;
-use App\Services\KategoriService;
 use App\Services\ProdukService;
 use Illuminate\Http\Request;
 
@@ -16,22 +15,19 @@ class ProdukController extends Controller
     public function __construct()
     {
         $this->produkService = new ProdukService();
-        $kategoriService = new KategoriService();
-        view()->share([
-            'list_kategori' => $kategoriService->dropdown()
-        ]);
+        view()->share(['list_kategori' => $this->produkService->list_kategori()]);
     }
 
     public function index()
     {
-        return view('admin.produk.index');
+        return view('umkm.produk.index');
     }
 
     public function search(Request $request)
     {
         $produk = $this->produkService->search($request->all());
 
-        return view('admin.produk._table',compact('produk'));
+        return view('umkm.produk._table',compact('produk'));
     }
 
     public function create()
@@ -68,5 +64,4 @@ class ProdukController extends Controller
     {
         return $this->produkService->delete($id);
     }
-
 }

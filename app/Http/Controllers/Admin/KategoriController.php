@@ -42,7 +42,7 @@ class KategoriController extends Controller
     {
         $kategori = $this->kategoriService->find($id);
 
-        return view('admin.kategori._info', compact('kategori',));
+        return view('admin.kategori._info', compact('kategori'));
     }
 
     public function update(KategoriSaveRequest $request, $id)

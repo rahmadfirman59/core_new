@@ -23,7 +23,7 @@ class ProdukSaveRequest extends FormRequest
     {
         return [
             'nama' => 'required',
-            'kategori' => 'required',
+            'kategori_id' => 'required',
             'stok' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',

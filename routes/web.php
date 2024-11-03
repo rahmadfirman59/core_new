@@ -11,6 +11,7 @@ Route::middleware([])->group(__DIR__ . '/auth.php');
 Route::middleware(['auth', 'io'])->group(function () {
 
     Route::prefix('admin')->name('admin')->group(__DIR__ . '/admin.php');
+    Route::prefix('umkm')->name('umkm')->group(__DIR__ . '/umkm.php');
 
 //    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 });

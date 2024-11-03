@@ -19,9 +19,8 @@ class IoMiddleware
         $role = auth()->user()->akses;
         if ($request->method() === 'GET') {
             $menuService = new MenuService();
-            $menus = $menuService->list_menu("Super Admin");
+            $menus = $menuService->list_menu($role);
             view()->share(['menus' => $menus]);
-
             $current_route = $request->route()->getName();
             $current_route_params = $request->query();
             view()->share($menuService::current_menu($menus, $current_route, $role, $current_route_params));

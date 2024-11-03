@@ -11,6 +11,7 @@ class HomeController extends Controller
         if (auth()->check()) {
             $akses = auth()->user()->akses;
             if ($akses === 'Superadmin') return redirect()->route('admin');
+            if ($akses === 'UMKM') return redirect()->route('umkm');
             auth()->logout();
         }
 

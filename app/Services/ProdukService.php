@@ -14,7 +14,8 @@ class ProdukService extends Service
         $nama = $params['nama'] ?? '';
         if ($nama !== '') $produk = $produk->where('nama', 'like', "%$nama%");
 
-        $produk = $this->searchFilter($params, $produk, []);
+
+        $produk = $this->searchFilter($params, $produk, ['kategori_id']);
         return $this->searchResponse($params, $produk);
     }
 

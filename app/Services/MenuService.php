@@ -27,31 +27,18 @@ class MenuService
         ]],
     ];
     protected static array $umkm = [
-        ['route' => 'admin', 'caption' => 'Dashboard'],
-        ['route' => 'admin.user.index', 'caption' => 'Data Master', 'side_menus' => [
-            ['route' => 'admin.user.index', 'caption' => 'User'],
-            ['route' => 'admin.slider.index', 'caption' => 'Slider'],
-            ['route' => 'admin.kategori.index', 'caption' => 'Kategori'],
-        ]],
-        ['route' => 'admin.profil.sambutan', 'caption' => 'Profil', 'side_menus' => [
-            ['route' => 'admin.profil.sambutan', 'caption' => 'Sambutan'],
-            ['route' => 'admin.profil.visi.misi', 'caption' => 'Visi Misi'],
-            ['route' => 'admin.profil.sejarah', 'caption' => 'Sejarah'],
-            ['route' => 'admin.profil.pengurus', 'caption' => 'Pengurus'],
-            ['route' => 'admin.profil.program.kerja', 'caption' => 'Program Kerja'],
-        ]],
-        ['route' => 'admin.produk.index', 'caption' => 'Produk', 'side_menus' => [
-            ['route' => 'admin.produk.index', 'caption' => 'Produk'],
-        ]],
-        ['route' => 'admin.kegiatan.index', 'caption' => 'Kegiatan', 'side_menus' => [
-            ['route' => 'admin.kegiatan.index', 'caption' => 'Kegiatan'],
+        ['route' => 'umkm', 'caption' => 'Dashboard'],
+
+        ['route' => 'umkm.produk.index', 'caption' => 'Produk', 'side_menus' => [
+            ['route' => 'umkm.produk.index', 'caption' => 'Produk'],
         ]],
     ];
 
     public function list_menu($role): array
     {
         $menus = match ($role) {
-            "Super Admin" => self::$admin,
+            "Superadmin" => self::$admin,
+            "UMKM" => self::$umkm,
             default => [],
         };
         return $menus;

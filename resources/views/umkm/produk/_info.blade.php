@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-10">
                     <x-metronic-input name="nama" caption="Nama" :value="$produk->nama ?? ''" />
-                    <x-metronic-select name="kategori_id" caption="Kategori" :options="$list_kategori" :value="$produk->kategori_id ?? ''" />
+                    <x-metronic-select name="kategori" caption="Kategori" :options="$list_kategori" :value="$produk->kategori ?? ''" />
                     <x-metronic-input name="stok" caption="Stok" :value="$produk->stok ?? ''" />
                     <x-metronic-input name="produk" caption="Produk" :value="$produk->produk ?? ''" />
                     <x-metronic-input name="bahan" caption="Bahan" :value="$produk->bahan ?? ''" />

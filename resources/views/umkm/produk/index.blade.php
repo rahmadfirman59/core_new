@@ -26,9 +26,9 @@
                         <div class="card-title d-flex flex-lg-row align-items-center flex-column gap-6">
                             <div class="d-flex align-items-center position-relative my-1 gap-6">
                                 <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-4"><span class="path1"></span><span class="path2"></span></i>
-                                <x-input name="nama" prefix="search_" caption="Search Slider" class="form-control-solid w-250px ps-12" />
+                                <x-input name="judul" prefix="search_" caption="Search Slider" class="form-control-solid w-250px ps-12" />
                             </div>
-                            <x-select name="kategori_id" prefix="search_" caption="Semua Kategori" :options="$list_kategori" class="form-select-solid w-250px" data-control="select2" onchange="search_data()" />
+                            <x-select name="kategori" prefix="search_" caption="Semua Kategori" :options="$list_kategori" class="form-select-solid w-250px" data-control="select2" onchange="search_data()" />
                         </div>
                         <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
                         </div>
