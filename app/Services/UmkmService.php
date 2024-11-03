@@ -54,4 +54,13 @@ class UmkmService extends Service
         return array_combine(Umkm::KATEGORI, Umkm::KATEGORI);
     }
 
+    public function dropdown()
+    {
+        $result = [];
+        foreach ($this->search() as $value) {
+            $result[$value->id] =$value->nama;
+        }
+        return $result;
+    }
+
 }

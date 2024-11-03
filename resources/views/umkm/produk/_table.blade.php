@@ -18,7 +18,7 @@
             <tr>
                 <td class="ps-4">{{ $no++ }}</td>
                 <td>{{ $s->nama }}</td>
-                <td>{{ $s->kategori }}</td>
+                <td>{{ (!empty($s->kategoris) ? $s->kategoris->nama_kategori: '') }}</td>
                 <td>{{ $s->harga }}</td>
 
                 <td class="text-end text-nowrap">

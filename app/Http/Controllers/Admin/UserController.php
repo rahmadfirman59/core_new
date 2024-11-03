@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserSaveRequest;
+use App\Services\UmkmService;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,11 @@ class UserController extends Controller
     public function __construct()
     {
         $this->userService = new UserService;
-        view()->share(['list_akses' => $this->userService->list_akses()]);
+        $umkmService = new UmkmService();
+        view()->share([
+            'list_akses' => $this->userService->list_akses(),
+            "list_umkm" => $umkmService->dropdown()
+        ]);
     }
 
     public function index()

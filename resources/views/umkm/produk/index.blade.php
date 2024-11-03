@@ -48,7 +48,7 @@
             $table = $('#table'),
             $card_data = $('#card_data'),
             $card_info = $('#card_info');
-        let selected_page = 1, _token = '{{ csrf_token() }}', base_url = '{{ url('admin/produk') }}';
+        let selected_page = 1, _token = '{{ csrf_token() }}', base_url = '{{ url('umkm/produk') }}';
 
         let init = () => {
             $card_info.html('');

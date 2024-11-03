@@ -10,6 +10,7 @@
             <x-metronic-input name="password" caption="Password" type="password" />
             <x-metronic-input name="password_confirmation" caption="Ulangi Password" type="password" />
             <x-metronic-select name="akses" caption="Akses" :options="$list_akses" :value="$user->akses ?? ''" />
+            <x-metronic-select name="umkm_id" caption="UMKM" :options="$list_umkm" :value="$user->umkm_id ?? ''" />
         </div>
         <div class="card-footer d-flex justify-content-end py-6">
             <button type="button" onclick="init()" class="btn btn-light btn-active-light-primary me-2">Batal</button>
